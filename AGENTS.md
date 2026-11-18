@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+<!-- AGENT-MEMORY:BEGIN -->
+- Keep the business site at / and the interactive fictional salon demo at /tapline, so the demo has a directly shareable website address.
+- Centralize business contact links and demo services in src/lib/business.ts to keep every WhatsApp handoff consistent; the demo directs enquiries to the business and never creates appointments.
+- Keep presentation tokens and page styles in src/styles.css and use shared Button variants for actions to preserve the two distinct studio and salon identities.
+<!-- AGENT-MEMORY:END -->
