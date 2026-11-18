@@ -14,6 +14,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeSwitch } from "@/components/theme";
 import logo from "@/assets/walutech-logo.png.asset.json";
 import salon from "@/assets/tapline-salon.jpg";
 import { business, whatsappUrl } from "@/lib/business";
@@ -87,17 +88,20 @@ function Index() {
             <a href="#process">How it works</a>
             <a href="#contact">Contact</a>
           </nav>
-          <Button asChild variant="whatsapp" size="touch">
-            <a
-              href={whatsappUrl("Hi WaluTech! I’d like to talk about a project.")}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <MessageCircle />
-              Let’s talk
-              <ArrowUpRight />
-            </a>
-          </Button>
+          <div className="header-actions">
+            <ThemeSwitch />
+            <Button asChild variant="whatsapp" size="touch">
+              <a
+                href={whatsappUrl("Hi WaluTech! I’d like to talk about a project.")}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <MessageCircle />
+                Let’s talk
+                <ArrowUpRight />
+              </a>
+            </Button>
+          </div>
         </div>
       </header>
 

@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowLeft, ArrowUpRight, Check, MessageCircle, Clock, Scissors, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeSwitch } from "@/components/theme";
 import salon from "@/assets/tapline-salon.jpg";
 import { salonServices, demoBookingUrl, whatsappUrl } from "@/lib/business";
 
@@ -56,11 +57,14 @@ function Tapline() {
           <a href="#salon-services">Our services</a>
           <a href="#salon-about">The studio</a>
         </nav>
-        <Button asChild variant="salon" size="touch">
-          <a href="#salon-services">
-            Find your next look <ArrowUpRight />
-          </a>
-        </Button>
+        <div className="header-actions">
+          <ThemeSwitch />
+          <Button asChild variant="salon" size="touch">
+            <a href="#salon-services">
+              Find your next look <ArrowUpRight />
+            </a>
+          </Button>
+        </div>
       </header>
       <main>
         <section className="salon-hero">

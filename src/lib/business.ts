@@ -1,7 +1,7 @@
 export const business = {
   phone: "265990000358",
   displayPhone: "+265 990 000 358",
-  email: "walutech360@gmail.com",
+  email: "walutech365@gmail.com",
 };
 
 export function whatsappUrl(message: string) {

@@ -6,7 +6,7 @@ describe("Business contact and demo handoff", () => {
     expect(new URL(whatsappUrl("Hello")).pathname).toBe("/265990000358");
   });
   it("uses the approved email address", () => {
-    expect(business.email).toBe("walutech360@gmail.com");
+    expect(business.email).toBe("walutech365@gmail.com");
   });
   it("preserves the selected service in the demo handoff without claiming an appointment", () => {
     const url = new URL(demoBookingUrl("Knotless braids"));

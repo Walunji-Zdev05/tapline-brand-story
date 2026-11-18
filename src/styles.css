@@ -39,6 +39,8 @@
   --radius-lg: 8px;
 }
 :root {
+  color-scheme: light;
+  --salon-button: oklch(0.36 0.058 158);
   --background: oklch(0.996 0.002 260);
   --foreground: oklch(0.22 0.036 267);
   --card: oklch(1 0 0);
@@ -73,6 +75,66 @@
     transparent 75%
   );
   --cover-overlay: linear-gradient(90deg, oklch(0.17 0.027 150 / 0.65), transparent 90%);
+}
+.dark {
+  color-scheme: dark;
+  --background: oklch(0.17 0.025 267);
+  --foreground: oklch(0.95 0.008 267);
+  --card: oklch(0.21 0.028 267);
+  --primary: oklch(0.76 0.135 270);
+  --secondary: oklch(0.195 0.03 267);
+  --muted: oklch(0.26 0.028 267);
+  --muted-foreground: oklch(0.74 0.02 267);
+  --accent: oklch(0.29 0.04 267);
+  --border: oklch(0.33 0.029 267);
+  --violet: oklch(0.75 0.16 303);
+  --cyan: oklch(0.78 0.13 217);
+  --whatsapp-soft: oklch(0.245 0.046 156);
+  --hero-background: oklch(0.185 0.035 267);
+  --grid-color: oklch(0.43 0.032 270 / 0.28);
+  --brand-gradient: linear-gradient(
+    110deg,
+    oklch(0.5 0.23 303),
+    oklch(0.47 0.22 270) 52%,
+    oklch(0.45 0.1 217)
+  );
+  --blue-soft: oklch(0.27 0.05 263);
+  --violet-soft: oklch(0.27 0.05 303);
+  --cyan-soft: oklch(0.27 0.04 205);
+  --salon: oklch(0.86 0.045 158);
+  --salon-background: oklch(0.18 0.016 150);
+  --salon-muted: oklch(0.235 0.024 150);
+  --salon-border: oklch(0.36 0.03 150);
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.theme-switch {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+.salon-site .theme-switch {
+  color: var(--salon);
+}
+.dark .header-inner .button-whatsapp {
+  color: var(--salon);
+}
+@media (max-width: 380px) {
+  .header-actions {
+    gap: 4px;
+  }
+  .header-inner .button-whatsapp {
+    padding-inline: 9px;
+  }
+  .salon-header .button-salon {
+    padding-inline: 10px;
+  }
 }
 @layer base {
   * {
@@ -645,7 +707,7 @@
   font-size: 9px;
 }
 .preview-book {
-  background: var(--salon);
+  background: var(--salon-button);
   color: var(--primary-foreground);
   display: flex;
   align-items: center;
@@ -824,7 +886,7 @@
   color: var(--salon);
 }
 .button-salon {
-  background: var(--salon);
+  background: var(--salon-button);
   color: var(--primary-foreground);
   font-family: var(--font-display);
 }
